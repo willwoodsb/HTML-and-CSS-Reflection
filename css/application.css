@@ -318,7 +318,7 @@ img {
     .foot-wrap {
       min-width: 768px;
       max-width: 80%; } }
-  @media screen and (min-width: 990px) {
+  @media screen and (min-width: 992px) {
     .foot-wrap {
       max-width: 1159.2px; } }
 
@@ -334,7 +334,7 @@ img {
 @media screen and (min-width: 497px) {
   .services, .offices {
     flex-direction: row; } }
-@media screen and (min-width: 990px) {
+@media screen and (min-width: 992px) {
   .services, .offices {
     justify-content: space-around; } }
 .services__item, .offices__item {
