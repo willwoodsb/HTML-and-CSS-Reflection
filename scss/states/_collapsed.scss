@@ -1,0 +1,25 @@
+// --------------------------------------------------------------------------
+// collapsing segments depending on screen ----------------------------------
+// --------------------------------------------------------------------------
+
+
+.is-collapsed-small-screen {
+    @media screen and (max-width: ($brkpoint-lg - 1)) {
+      visibility: collapse;
+      padding: 0;
+      height: 0;
+      margin: 0;
+      line-height: 0;
+    }
+}
+
+.is-collapsed-large-screen {
+    @media screen and (min-width: $brkpoint-lg) {
+      visibility: collapse;
+      padding: 0;
+      height: 0;
+      margin: 0;
+      line-height: 0;
+    }
+}
+

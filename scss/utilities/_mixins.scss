@@ -1,0 +1,29 @@
+
+// Media queries
+
+@mixin mq($break) {
+    @if $break =="small" {
+      @media screen and (min-width: $brkpoint-sm) and (max-width: $brkpoint-md) {
+        @content;
+      }
+    } @else if $break == "medium" {
+      @media screen and (min-width: ($brkpoint-md + 1)) {
+        @content;
+      }
+    } @else if $break == "large" {
+      @media screen and (min-width: $brkpoint-lg) {
+        @content;
+      }
+    } @else if $break == "x-large" {
+        @media screen and (min-width: $brkpoint-xlg) {
+          @content;
+        }
+    } @else if $break == "xx-large" {
+      @media screen and (min-width: $brkpoint-xxlg) {
+        @content;
+      }
+    } @else {
+      @error "Whoopsie"; 
+    }
+  }
+  

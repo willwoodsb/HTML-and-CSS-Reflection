@@ -1,0 +1,76 @@
+// --------------------------------------------------------------------------
+// Global configuration -----------------------------------------------------
+// --------------------------------------------------------------------------
+
+//fonts
+
+$font-url--google        : 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap';
+$font-family--primary    : 'Poppins', sans-serif;
+$font-family--secondary  :  sans-serif;
+
+// Font Weights
+
+$font-weight--thin       : 300;
+$font-weight--light      : 400;
+$font-weight--medium     : 500;
+$font-weight--bold       : 700;
+$font-weight--ultra-bold : 900;
+
+
+// Text
+
+$font-size--small: 13px;
+$base__font-size : 16px;
+$base__line      : 24px;
+$letter-space    : 0.4px;
+
+// Base colors
+
+$onyx            :    #333645;
+$granite         :       #666;
+$white           :       #FFF;
+
+//pop-up colors
+$rackley         :    #67809F;
+$tufts-blue      :    #4183D7;
+$ufo-green       :    #2ecc71;
+$jasper          :    #d64541;
+$purple-majesty  :    #926fb1;
+$awesome         :    #f62459;
+$dark-pastel-red :    #ce4125;
+
+
+//color usage
+
+$color-primary   :        $onyx;
+$color-secondary :     $granite;
+
+//Theme Colors
+
+$theme-colors: (
+    software: $rackley,
+    it-support: $tufts-blue,
+    dig-marketing: $ufo-green,
+    tel-services: $jasper,
+    web-design: $purple-majesty,
+    cyber-security: $awesome,
+    dev-course: $dark-pastel-red,
+);
+
+$social-colors: (
+    facebook: #4267b2,
+    twitter: #1da1f2,
+    instagram: #E1306C,
+    linkedin: #0e76a8,
+);
+
+// Breakpoints
+
+$brkpoint-sm:  1px;
+$brkpoint-md:  496px;
+$brkpoint-lg:  768px;
+$brkpoint-xlg: 990px;
+$brkpoint-xxlg: 1260px;
+
+
+

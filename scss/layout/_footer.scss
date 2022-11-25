@@ -1,0 +1,125 @@
+// --------------------------------------------------------------------------
+// Flex ---------------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+//global modifiers
+
+.foot-wrap {
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    @include mq(large) {
+        min-width: $brkpoint-lg;
+        max-width: 80%;
+    }
+    @include mq(x-large) {
+        max-width: ($brkpoint-xxlg*0.92);
+    }
+}
+
+// --------------------------------------------------------------------------
+// services and offices------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.footer-links {
+    @include mq(xx-large) {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+//layer 1 flex container and boxes
+
+.services, .offices{
+    @extend %flex;
+
+    @include mq(small) {
+        flex-direction: column;
+    }
+    @include mq(medium) {
+        flex-direction: row;
+    }
+    @include mq(x-large) {
+        justify-content: space-around;
+    }
+    //layer 2 flex container and boxes
+
+    &__item {
+        @extend %flex;
+        flex-direction: column;
+        min-width: 225px;
+
+        &:first-child {
+            margin-bottom: auto;
+        }
+    }
+}
+
+.offices {
+    @include mq(medium) {
+        flex-wrap: wrap;
+    }
+}
+
+// --------------------------------------------------------------------------
+// last section -------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.last-section {
+    margin: 10px 0 0;
+    font-size: $font-size--small;
+    width: 100%;
+    border-top: 1px solid #888;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    &__item {
+        margin: 5px;
+        display: flex;
+        flex-direction: row;
+        &:first-child {
+            padding: 10px 0 0;
+        }
+        &:last-child {
+            padding: 4px 0 0;
+        }
+        &--item {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+}
+
+//icons
+
+.icn {
+    
+    display: flex;
+    flex-direction: row;
+    // justify-content: flex-start;
+    &__item {
+        width: ($font-size--small + $base__font-size);
+        height: ($font-size--small + $base__font-size);
+        // z-index: 100;
+
+    }
+}
+
+@each $social, $color in $social-colors {
+    ##{$social} { //icon
+        width: 13px;
+        height: 13px;
+        @extend %img-center;
+        
+    }
+    .#{$social} { //container
+        position: relative;
+        &:hover {
+            background-color: $color;
+            border-radius: 50%;
+        }
+    }
+}
+
+

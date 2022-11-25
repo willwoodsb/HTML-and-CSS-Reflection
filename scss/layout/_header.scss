@@ -1,0 +1,70 @@
+// --------------------------------------------------------------------------
+// Header -------------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.top-banner {
+    padding: 20px 4px 20px 4px;
+}
+
+@media screen and (max-width: ($brkpoint-lg - 1)) {
+    .top-banner {
+        display: flex;
+        flex-direction: column;
+        &__row {
+            &--item:not(:first-child) {
+                margin-left: 10px;
+                margin-right: 10px;
+                flex-shrink: 0;
+            }
+            &:first-child {
+                display: flex;
+                flex-direction: row;
+            }
+            &--item:first-child {
+                margin-right: auto;
+                margin-top: auto;
+                margin-bottom: auto;
+            }
+
+        }
+    }
+    .phone {
+        position: relative;
+        &__image {
+            height: 25px;
+            width: 25px;
+            margin-top: 20px;
+        }
+    }
+}
+
+@include mq(large) {
+    .top-banner__row:first-child {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+.hamburger {
+    background-color: $color-primary;
+    border-radius: 3px;
+    &:hover {
+        background-color: darken($color-primary, 10%);
+    }
+    position: relative;
+    height: 56px;
+    width: 63px;
+    margin-top:6px;
+    margin-bottom: 15px;
+    &__image {
+        @extend %img-center;
+        height: 45px;
+        width: 55px;
+    }
+    
+}
+
+
+
+

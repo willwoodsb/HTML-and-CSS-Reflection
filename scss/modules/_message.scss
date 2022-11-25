@@ -1,0 +1,19 @@
+// --------------------------------------------------------------------------
+// Message Pop-up -----------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.msg-pop {
+    z-index: 100;
+    position: fixed;
+    right: 15px;
+    bottom: 70px;
+    height: 60px;
+    width: 60px;
+    background-color: $color-primary;
+    border-radius: 50%;
+    box-shadow: 0px 2px 4px rgba(0,0,0,.4);
+    &__#{icon} {
+        position: absolute;
+        @extend %img-center;
+    }
+}
