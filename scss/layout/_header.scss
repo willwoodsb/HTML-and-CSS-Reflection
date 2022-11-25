@@ -6,6 +6,7 @@
     padding: 20px 4px 20px 4px;
 }
 
+//small mquery (not using function as the website specifies this between ranges not used in function)
 @media screen and (max-width: ($brkpoint-lg - 1)) {
     .top-banner {
         display: flex;
@@ -19,6 +20,7 @@
             &:first-child {
                 display: flex;
                 flex-direction: row;
+                justify-content: space-around;
             }
             &--item:first-child {
                 margin-right: auto;
@@ -36,13 +38,39 @@
             margin-top: 20px;
         }
     }
+    .search {
+        height: 47px;
+        width: 100%;
+        padding: 5px 40px 5px 15px;
+        margin: 0;
+        background-color: rgba(0,0,0,0.1);
+        border: 2px solid rgba(0,0,0,0.13);
+        color: rgba(0,0,0,0.13);
+    }
+    .top-search {
+        width: 0;
+    }
 }
 
+
+//second stage of mquery
 @include mq(large) {
-    .top-banner__row:first-child {
+    .top-banner__row {
         display: flex;
         flex-direction: row;
         justify-content: center;
+        &--item:first-child {
+            margin-right: 50px;
+        }
+    } 
+    .search {
+        height: 56px;
+        width: 174px;
+        margin-top:6px;
+        margin-right: 10px;
+    }
+    .phone {
+        width: 0;
     }
 }
 
