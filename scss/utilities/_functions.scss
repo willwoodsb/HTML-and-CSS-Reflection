@@ -16,5 +16,10 @@
 
 //theme color selector 
 @function theme($theme) {
-    @return map-get($theme-colors , $theme )
+    @return map-get($theme-colors , $theme );
+}
+
+//theme color selector 
+@function grey($grey) {
+    @return map-get($greys , $grey );
 }
