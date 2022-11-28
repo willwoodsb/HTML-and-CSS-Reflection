@@ -1,0 +1,49 @@
+// --------------------------------------------------------------------------
+// main nav -----------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.main-nav {
+    background-color: $color-primary;
+    height: 90px;
+    color: $white;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__item {
+        display: flex;
+        flex-direction: column;
+        padding: 19px 0 18px;
+        &--child {
+            text-align: center;
+            &:first-child {
+                padding: 0 0 10px;
+            }
+            &:nth-child(2) {
+                font-size: $font-size--xsmall;
+                line-height: $font-size--xsmall;
+            }
+            &:last-child {
+                font-size: 20px;
+                line-height: 20px;
+            }
+        }
+    }
+}
+
+.nav-image {
+    height: 23px;
+}
+
+// loop to assign hover colors and icons to each nav section
+
+@each $theme, $icon in $theme-icons {
+    .#{$theme}__icon {
+        &::before {
+            content: $icon;
+        }
+        &:hover {
+            color: map-get($theme-colors, $theme);
+        }
+    }
+}

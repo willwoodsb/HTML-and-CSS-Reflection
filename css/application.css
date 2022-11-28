@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
 .hamburger__image, #facebook, #twitter, #instagram, #linkedin, .msg-pop__icon {
   position: absolute;
@@ -511,6 +512,67 @@ img {
   .linkedin:hover {
     background-color: #0e76a8;
     border-radius: 50%; }
+
+.main-nav {
+  background-color: #333645;
+  height: 90px;
+  color: #FFF;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+  .main-nav__item {
+    display: flex;
+    flex-direction: column;
+    padding: 19px 0 18px; }
+    .main-nav__item--child {
+      text-align: center; }
+      .main-nav__item--child:first-child {
+        padding: 0 0 10px; }
+      .main-nav__item--child:nth-child(2) {
+        font-size: 10px;
+        line-height: 10px; }
+      .main-nav__item--child:last-child {
+        font-size: 20px;
+        line-height: 20px; }
+
+.nav-image {
+  height: 23px; }
+
+.software__icon::before {
+  content: ""; }
+.software__icon:hover {
+  color: #67809F; }
+
+.it-support__icon::before {
+  content: #4183D7; }
+.it-support__icon:hover {
+  color: #4183D7; }
+
+.dig-marketing__icon::before {
+  content: #2ecc71; }
+.dig-marketing__icon:hover {
+  color: #2ecc71; }
+
+.tel-services__icon::before {
+  content: #d64541; }
+.tel-services__icon:hover {
+  color: #d64541; }
+
+.web-design__icon::before {
+  content: #926fb1; }
+.web-design__icon:hover {
+  color: #926fb1; }
+
+.cyber-security__icon::before {
+  content: #f62459; }
+.cyber-security__icon:hover {
+  color: #f62459; }
+
+.dev-course__icon::before {
+  content: #ce4125; }
+.dev-course__icon:hover {
+  color: #ce4125; }
 
 .msg-pop {
   z-index: 100;
