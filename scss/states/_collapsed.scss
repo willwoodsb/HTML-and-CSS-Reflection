@@ -10,6 +10,7 @@
       height: 0;
       margin: 0;
       line-height: 0;
+      width: 0;
     }
 }
 
@@ -20,6 +21,31 @@
       height: 0;
       margin: 0;
       line-height: 0;
+      width: 0;
     }
 }
+
+.is-collapsed-x-large-screen {
+  @media screen and (min-width: $brkpoint-xlg) and (max-width: $brkpoint-xxlg) {
+    visibility: collapse;
+    padding: 0;
+    height: 0;
+    margin: 0;
+    line-height: 0;
+    width: 0;
+  }
+}
+
+.is-visible-x-large-screen {
+  @media screen and (max-width: $brkpoint-xlg) {
+    visibility: collapse;
+    padding: 0;
+    height: 0;
+    margin: 0;
+    line-height: 0;
+    width: 0;
+  }
+}
+
+
 

@@ -74,9 +74,6 @@
 
         }
     }
-    .top-search {
-        width: 0;
-    }
 }
 
 //----------------------
@@ -89,7 +86,8 @@
         flex-direction: row;
         justify-content: center;
         &--item:first-child {
-            margin-right: 50px;
+            margin-right: 80px;
+            width: 370px;
         }
     } 
     .search {
@@ -97,6 +95,7 @@
         width: 174px;
         margin-right: 0px;
         border: 1px solid #ccc;
+        border-radius: 2px 0 0 2px;;
         padding-left: 15px;
         &:focus {
             outline: $tufts-blue;
@@ -122,31 +121,87 @@
         flex-direction: row;
         margin-right: 25px;
     }
-    .phone {
-        width: 0;
-    }
 }
 
-//menun icon remains unneffected by screen size
+//---------------------------------------
+//largest breakpoint
+//---------------------------------------
+
+
+@include mq(x-large) {
+    .search__icon {
+        border-radius: 2px;
+    }
+    // .top-search__child:first-child {
+    //     width: 240px;
+    // }
+
+}
+
+//---------------------------------------
+//for elements unneffected by screen size
+//---------------------------------------
+
+.box {
+    border-radius: 2px;
+    position: relative;
+    height: 56px;
+    margin-top:6px;
+    margin-bottom: 15px;
+}
 
 .hamburger {
     background-color: $color-primary;
-    border-radius: 2px;
+    width: 63px;
     &:hover {
         background-color: darken($color-primary, 10%);
     }
-    position: relative;
-    height: 56px;
-    width: 63px;
-    margin-top:6px;
-    margin-bottom: 15px;
     &__image {
-        @extend %img-center;
         height: 45px;
         width: 55px;
     }
+    &__image {
+        @extend %img-center;
+    }
     
 }
+
+.mouse {
+    background-color: $magical-merlin;
+    width: 141px;
+    margin-right: 20px;
+    &:hover {
+        background-color: darken($magical-merlin, 10%);
+    }
+}
+.send {
+    background-color: $dark-grey;
+    width: 141px;
+    margin-right: 20px;
+    &:hover {
+        background-color: darken($dark-grey, 10%);
+    }
+}
+
+.mouse, .send {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-transform: uppercase;
+    color: $white;
+    font-size: 18px;
+    &__image {
+        height: 25px;
+    }
+    &__child {
+        margin-top: auto;
+        margin-bottom: auto;
+        &:first-child {
+            margin-right: 5px;
+        }
+    }
+}
+
 
 
 
