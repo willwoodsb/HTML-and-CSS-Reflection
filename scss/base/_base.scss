@@ -27,9 +27,17 @@ a {
     text-decoration: none;
 }
 
+h2 {
+    font-size: 40px;
+}
+
 h4 {
     font-weight: $font-weight--medium;
     text-transform: uppercase;
+}
+
+p {
+    font-size: 20px;
 }
 
 footer {

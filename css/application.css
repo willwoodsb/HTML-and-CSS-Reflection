@@ -207,9 +207,15 @@ main {
 a {
   text-decoration: none; }
 
+h2 {
+  font-size: 40px; }
+
 h4 {
   font-weight: 500;
   text-transform: uppercase; }
+
+p {
+  font-size: 20px; }
 
 footer {
   background-color: #333645;
@@ -524,11 +530,15 @@ img {
   .main-nav__item {
     display: flex;
     flex-direction: column;
-    padding: 19px 0 18px; }
+    padding: 19px 0 18px;
+    width: 134.29px; }
     .main-nav__item--child {
       text-align: center; }
+      .main-nav__item--child:not(:first-child) {
+        color: #FFF; }
       .main-nav__item--child:first-child {
-        padding: 0 0 10px; }
+        padding: 0 0 10px;
+        font-size: 21px; }
       .main-nav__item--child:nth-child(2) {
         font-size: 10px;
         line-height: 10px; }
@@ -536,44 +546,79 @@ img {
         font-size: 20px;
         line-height: 20px; }
 
+@media screen and (min-width: 1260px) {
+  .main-nav__item {
+    width: 167.14px; } }
 .nav-image {
   height: 23px; }
 
-.software__icon::before {
-  content: ""; }
-.software__icon:hover {
+.software__icon {
   color: #67809F; }
+  .software__icon::before {
+    content: ""; }
+.software:hover {
+  background-color: #67809F; }
 
-.it-support__icon::before {
-  content: #4183D7; }
-.it-support__icon:hover {
+.it-support__icon {
   color: #4183D7; }
+  .it-support__icon::before {
+    content: ""; }
+.it-support:hover {
+  background-color: #4183D7; }
 
-.dig-marketing__icon::before {
-  content: #2ecc71; }
-.dig-marketing__icon:hover {
+.dig-marketing__icon {
   color: #2ecc71; }
+  .dig-marketing__icon::before {
+    content: ""; }
+.dig-marketing:hover {
+  background-color: #2ecc71; }
 
-.tel-services__icon::before {
-  content: #d64541; }
-.tel-services__icon:hover {
+.tel-services__icon {
   color: #d64541; }
+  .tel-services__icon::before {
+    content: ""; }
+.tel-services:hover {
+  background-color: #d64541; }
 
-.web-design__icon::before {
-  content: #926fb1; }
-.web-design__icon:hover {
+.web-design__icon {
   color: #926fb1; }
+  .web-design__icon::before {
+    content: "</>"; }
+.web-design:hover {
+  background-color: #926fb1; }
 
-.cyber-security__icon::before {
-  content: #f62459; }
-.cyber-security__icon:hover {
+.cyber-security__icon {
   color: #f62459; }
+  .cyber-security__icon::before {
+    content: ""; }
+.cyber-security:hover {
+  background-color: #f62459; }
 
-.dev-course__icon::before {
-  content: #ce4125; }
-.dev-course__icon:hover {
+.dev-course__icon {
   color: #ce4125; }
+  .dev-course__icon::before {
+    content: ""; }
+.dev-course:hover {
+  background-color: #ce4125; }
 
+.main-nav__item:hover .main-nav__item--child:first-child {
+  color: white; }
+
+.header-text-image {
+  height: 550px;
+  background-image: url("../img/home-oaVs.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #FFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; }
+
+@media screen and (min-width: 992px) {
+  .header-text-image {
+    text-align: start; } }
 .msg-pop {
   z-index: 100;
   position: fixed;

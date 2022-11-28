@@ -1,0 +1,22 @@
+// --------------------------------------------------------------------------
+// main img -----------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.header-text-image {
+    height: 550px;
+    background-image: url("../img/home-oaVs.webp"); 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+@include mq(x-large) {
+    .header-text-image {
+       text-align: start; 
+    }
+}

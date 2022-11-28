@@ -14,10 +14,15 @@
         display: flex;
         flex-direction: column;
         padding: 19px 0 18px;
+        width: 134.29px;
         &--child {
             text-align: center;
+            &:not(:first-child) {
+                color:$white;  
+            }
             &:first-child {
                 padding: 0 0 10px;
+                font-size: 21px;
             }
             &:nth-child(2) {
                 font-size: $font-size--xsmall;
@@ -31,6 +36,12 @@
     }
 }
 
+@include mq(xx-large) {
+    .main-nav__item {
+        width: 167.14px;
+    }
+}
+
 .nav-image {
     height: 23px;
 }
@@ -38,12 +49,22 @@
 // loop to assign hover colors and icons to each nav section
 
 @each $theme, $icon in $theme-icons {
-    .#{$theme}__icon {
-        &::before {
-            content: $icon;
+    .#{$theme} {
+        &__icon {
+            color: map-get($theme-colors, $theme);
+            &::before {
+                content: $icon;
+            }
         }
         &:hover {
-            color: map-get($theme-colors, $theme);
+            background-color: map-get($theme-colors, $theme);
         }
+    }
+}
+
+//hover condition for icons
+.main-nav__item:hover {
+    .main-nav__item--child:first-child {
+        color: white;
     }
 }
