@@ -8,3 +8,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+//auto margins to center content
+@mixin auto-mg {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+//mild time saver for flexboxes
+@mixin flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin flex-col {
+    display: flex;
+    flex-direction: column;
+}

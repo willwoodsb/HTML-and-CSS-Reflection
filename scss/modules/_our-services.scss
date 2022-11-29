@@ -1,0 +1,23 @@
+
+// --------------------------------------------------------------------------
+// our-services -------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.our-services {
+    color: $color-primary;
+    padding: 50px 15px;
+
+    &__head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        &--item:last-child {
+            margin-top: auto;
+            margin-bottom: auto;
+        }
+        & span::after {
+            content: "\ea3c";
+            margin-left: 5px;
+        }
+    }
+}

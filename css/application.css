@@ -197,32 +197,33 @@ body {
   line-height: 1.5;
   letter-spacing: 0.4px; }
 
-.container {
-  padding-left: 10px;
-  padding-right: 10px; }
-
-main {
-  background-color: #666; }
-
 a {
   text-decoration: none;
   font-family: "Poppins", sans-serif;
   color: #FFF; }
 
+h1 {
+  margin: 0;
+  font-size: 2.7em;
+  font-weight: 600; }
+
 h2 {
-  font-size: 40px;
+  font-size: 2.5em;
   margin: 0; }
+
+h3 {
+  margin: 0;
+  font-size: 1.625em; }
 
 h4 {
   font-weight: 500;
   text-transform: uppercase; }
 
 p {
-  font-size: 20px;
+  font-size: 1.25em;
   margin: 0; }
 
 footer {
-  background-color: #333645;
   color: #FFF;
   padding: 47px 0 43px; }
   footer a {
@@ -231,7 +232,7 @@ footer {
       text-decoration: underline; }
 
 .search {
-  font-size: 14px;
+  font-size: 0.875em;
   border-radius: 2px; }
   .search:focus {
     outline: none; }
@@ -281,6 +282,24 @@ img {
       margin-left: auto;
       margin-right: auto; } }
 
+.width {
+  margin: 0 10px; }
+  @media screen and (min-width: 768px) {
+    .width {
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 992px) {
+    .width {
+      max-width: 940px;
+      margin-left: auto;
+      margin-right: auto; } }
+  @media screen and (min-width: 1260px) {
+    .width {
+      max-width: 1170px;
+      margin-left: auto;
+      margin-right: auto; } }
+
 .top-banner {
   padding: 20px 4px 20px 4px; }
 
@@ -301,12 +320,10 @@ img {
       margin-top: auto;
       margin-bottom: auto; }
 
-  .phone {
-    position: relative; }
-    .phone__image {
-      height: 25px;
-      width: 25px;
-      margin-top: 20px; }
+  .phone__image {
+    height: 25px;
+    width: 25px;
+    margin-top: 20px; }
 
   .search-wrapper {
     width: 100%;
@@ -524,7 +541,6 @@ img {
     border-radius: 50%; }
 
 .main-nav {
-  background-color: #333645;
   height: 90px;
   color: #FFF;
   text-transform: uppercase;
@@ -611,17 +627,12 @@ img {
 .header-text-image {
   position: relative;
   height: 550px;
-  background-image: url("../img/home-oaVs.webp");
-  background-color: #72737d;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-blend-mode: multiply;
-  background-size: cover;
   color: #FFF;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center; }
+  text-align: center;
+  padding: 0 15px; }
   .header-text-image h2 {
     margin: 0 0 20px;
     line-height: 1.2;
@@ -633,7 +644,7 @@ img {
     font-size: 20px;
     background-color: #67809F;
     padding: 15px 20px;
-    margin: 31px 0 18px;
+    margin: 31px 0 32px;
     width: 200px;
     border-radius: 2px;
     margin-left: auto;
@@ -668,27 +679,32 @@ img {
         background-color: #999AA2;
         border-radius: 50%; }
 
-@media screen and (min-width: 1px) and (max-width: 496px) {
-  .header-text-image {
-    padding: 0 15px; } }
-@media screen and (min-width: 497px) {
-  .header-text-image {
-    padding: 0 15px; } }
-@media screen and (min-width: 768px) {
-  .header-text-image {
-    padding: 0 90px; } }
 @media screen and (min-width: 992px) {
   .header-text-image {
-    text-align: start;
-    padding: 0 30px; }
+    text-align: start; }
     .header-text-image__item {
-      max-width: 800px; }
+      max-width: 1000px; }
     .header-text-image .button {
       margin-left: 0; }
     .header-text-image h2 {
       font-size: 64px; }
     .header-text-image p {
       font-size: 26px; } }
+.granite {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.bck-img {
+  height: 550px;
+  background-image: url("../img/home-oaVs.webp");
+  background-color: #72737d;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-blend-mode: multiply;
+  background-size: cover; }
+
+.primary {
+  background-color: #333645; }
+
 .msg-pop {
   z-index: 100;
   position: fixed;
@@ -702,6 +718,20 @@ img {
   .msg-pop__icon {
     position: absolute; }
 
+.our-services {
+  color: #333645;
+  padding: 50px 15px; }
+  .our-services__head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; }
+    .our-services__head--item:last-child {
+      margin-top: auto;
+      margin-bottom: auto; }
+    .our-services__head span::after {
+      content: "\ea3c";
+      margin-left: 5px; }
+
 @media screen and (max-width: 767px) {
   .is-collapsed-small-screen {
     visibility: collapse;
@@ -713,6 +743,15 @@ img {
 
 @media screen and (min-width: 768px) {
   .is-collapsed-large-screen {
+    visibility: collapse;
+    padding: 0;
+    height: 0;
+    margin: 0;
+    line-height: 0;
+    width: 0; } }
+
+@media screen and (max-width: 768px) {
+  .is-visible-large-screen {
     visibility: collapse;
     padding: 0;
     height: 0;

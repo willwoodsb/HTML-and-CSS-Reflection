@@ -1,0 +1,17 @@
+.granite {
+    background-color: $grey;
+}
+
+.bck-img {
+    height: 550px;
+    background-image: url("../img/home-oaVs.webp"); 
+    background-color: darken($dark-grey, 15%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-size: cover;
+}
+
+.primary {
+    background-color: $color-primary;
+}

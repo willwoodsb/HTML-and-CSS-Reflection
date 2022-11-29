@@ -13,25 +13,24 @@ body {
     letter-spacing: $letter-space;
 }
 
-.container {
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
-
-main {
-    background-color: $color-secondary;
-}
-
 a {
     text-decoration: none;
     font-family: $font-family--primary;
     color: $white;
 }
+h1 {
+    margin: 0;
+    font-size: em(43.2px);
+    font-weight: 600;
+}
 
 h2 {
-    font-size: 40px;
+    font-size: em(40px);
     margin: 0;
+}
+h3 {
+    margin: 0;
+    font-size: em(26px);
 }
 
 h4 {
@@ -40,12 +39,11 @@ h4 {
 }
 
 p {
-    font-size: 20px;
+    font-size: em(20px);
     margin: 0
 }
 
 footer {
-    background-color: $color-primary;
     color: $white;
     padding: 47px 0 43px;
     a {
@@ -57,7 +55,7 @@ footer {
 }
 
 .search {
-    font-size: 14px;
+    font-size: em(14px);
     border-radius: 2px;
     &:focus {
         outline: none;

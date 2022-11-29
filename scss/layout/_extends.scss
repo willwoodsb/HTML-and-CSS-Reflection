@@ -8,9 +8,10 @@
     margin: 0 0 30px;
     justify-content: center;
     @include mq(small) {
-        margin-left: auto;
-        margin-right: auto;
+        @include auto-mg;
     }
 }
+
+
 
 
