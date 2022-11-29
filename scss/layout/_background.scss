@@ -1,11 +1,10 @@
-.granite {
+.grey {
     background-color: $grey;
 }
 
 .bck-img {
     height: 550px;
-    background-image: url("../img/home-oaVs.webp"); 
-    background-color: darken($dark-grey, 15%);
+    background-image: url("../img/home-oaVs.webp"), linear-gradient(to right, darken($dark-grey, 55%) , $white); 
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: multiply;

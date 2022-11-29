@@ -5,19 +5,130 @@
 
 .our-services {
     color: $color-primary;
-    padding: 50px 15px;
+    padding: 50px 0;
+    a {
+        color: $color-primary;
+    }
 
     &__head {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         justify-content: space-between;
         &--item:last-child {
             margin-top: auto;
             margin-bottom: auto;
+            color: $color-primary;
+            font-size: em(26px);
+            font-weight: 600;
+            &:hover {
+                text-decoration: underline;
+            }
         }
         & span::after {
-            content: "\ea3c";
-            margin-left: 5px;
+            content: " \ea3c";
+        }
+    }
+
+    &__content {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-rows: auto;
+        margin-top: 30px;
+        &--item {
+            color: $color-primary;
+            display: block;
+            background-color: $white;
+            padding: 30px;
+            // margin: 30px 0 0; 
+            text-align: center;
+            border: 0.7px solid $dark-grey;
+            border-radius: 15px;
+            p {
+                font-size: $font-size--small;
+                margin: 0 0 25px;
+            }
+            h3 {
+                margin: 0 0 21px;
+            }
+            .button {
+                padding: 11px 15px;
+                color: $white;
+            }
+            //formatting the circular icon 
+            &--child:first-child {
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                @include auto-mg;
+                @include flex-col;
+                justify-content: center;
+                margin-bottom: 17px;
+            }
         }
     }
 }
+
+//media queries
+
+@include mq(large) {
+    .our-services__content {
+        grid-template-columns: repeat(6, 1fr);
+        &--item:nth-child(-n + 3) {
+            grid-column-start: 1;
+            grid-column-end: 7;
+        }
+        &--item:nth-child(2n + 4) {
+            grid-column-start: 1;
+            grid-column-end: 4;
+        }
+        &--item:nth-child(2n + 5) {
+            grid-column-start: 4;
+            grid-column-end: 7;
+        }
+    }
+}
+
+@include mq(x-large) {
+    .our-services__content {
+        &--item:nth-child(-4n + 1) {
+            grid-column-start: 1;
+            grid-column-end: 3;
+        }
+        &--item:nth-child(-4n + 2) {
+            grid-column-start: 3;
+            grid-column-end: 5;
+        }
+        &--item:nth-child(-4n + 3) {
+            grid-column-start: 5;
+            grid-column-end: 7;
+        }
+    }
+}
+
+//asigning theme colours for normal and hover states; same loop as nav but with adjustments (i.e. .theme-state2)
+@each $theme, $icon in $theme-icons {
+    .#{$theme}-s2 {
+        &__element {
+            background-color: map-get($theme-colors, $theme);
+            color:$white;
+            &--icon {
+                font-size: 24px;
+            }
+            &--icon::before {
+                content: $icon;
+            }
+        }
+        &:hover {
+            background-color: map-get($theme-colors, $theme);
+            .#{$theme}-s2__element {
+                color: map-get($theme-colors, $theme);
+                background-color: white;
+            }
+            .our-services__content--item--child {
+                h3, p {
+                   color: $white; 
+                }
+            }
+        }
+    }
+}
+

@@ -6,12 +6,10 @@
     height: 90px;
     color: $white;
     text-transform: uppercase;
-    display: flex;
-    flex-direction: row;
+    @include flex-row;
     justify-content: center;
     &__item {
-        display: flex;
-        flex-direction: column;
+        display: block;
         padding: 19px 0 18px;
         width: 134.29px;
         &--child {

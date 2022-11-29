@@ -1,16 +1,19 @@
 // --------------------------------------------------------------------------
-// main img -----------------------------------------------------------------
+// section with sliding images ----------------------------------------------
 // --------------------------------------------------------------------------
 
 //main styling rules
 .header-text-image {
+    a {
+        color: $white;
+    }
     position: relative;
     height: 550px;
     color: $white;
     @include flex-col;
     justify-content: center;
     text-align: center;
-    padding: 0 15px;
+    padding: 0 15px 45px;
     h2 {
         margin: 0 0 20px;
         line-height: (0.8*($base__line/$base__font-size));
@@ -20,13 +23,11 @@
         margin: 0 0 6px;
     }
     .button {
-        text-transform: uppercase;
         font-size: 20px;
         background-color: $rackley;
         padding: 15px 20px;
         margin: 31px 0 32px;
         width: 200px;
-        border-radius: 2px;
         margin-left: auto;
         margin-right: auto;
         &:hover {
@@ -42,13 +43,13 @@
 
     //bottom slider links
     .slider-link {
-        display: flex;
-        flex-direction: row;
+        @include flex-row;
         justify-content: center;
         position: absolute;
-        bottom: 40px;
+        bottom: 30px;
         left: 50%;
         transform: translate(-50%, -50%);
+        // margin-top: 20px;
         &__item {
             height: 23px;
             width: 23px;
