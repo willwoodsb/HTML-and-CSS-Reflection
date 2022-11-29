@@ -2,21 +2,123 @@
 // main img -----------------------------------------------------------------
 // --------------------------------------------------------------------------
 
+//main styling rules
 .header-text-image {
+    position: relative;
     height: 550px;
     background-image: url("../img/home-oaVs.webp"); 
+    background-color: darken($dark-grey, 15%);
     background-repeat: no-repeat;
     background-position: center;
+    background-blend-mode: multiply;
     background-size: cover;
     color: $white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    h2 {
+        margin: 0 0 20px;
+        line-height: (0.8*($base__line/$base__font-size));
+        font-weight: 500;
+    }
+    p {
+        margin: 0 0 6px;
+    }
+    .button {
+        text-transform: uppercase;
+        font-size: 20px;
+        background-color: $rackley;
+        padding: 15px 20px;
+        margin: 31px 0 18px;
+        width: 200px;
+        border-radius: 2px;
+        margin-left: auto;
+        margin-right: auto;
+        &:hover {
+            background-color: darken($rackley, 10%);
+        }
+    }
+    span {
+        &:after {
+            content: "\ea3c"; //arrow in button
+        }
+        margin-left: 9px;
+    }
+
+    //bottom slider links
+    .slider-link {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: absolute;
+        bottom: 40px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &__item {
+            height: 23px;
+            width: 23px;
+            position: relative;
+            margin: 0 5px;
+            &:hover {
+                border: 2px solid $white;
+                border-radius: 50%;
+                .slider-link__item--inner {
+                    background-color: $white;
+                }
+            }
+            &--inner {
+                width: 11px;
+                height: 11px;
+                background-color: $dark-grey;
+                border-radius: 50%;
+                @extend %img-center;
+            }
+        }
+    }
 }
 
+
+
+
+//sort out padding with media queries 
+@include mq(small) {
+    .header-text-image {
+        padding: 0 15px;
+
+    } 
+}
+
+@include mq(medium) {
+    .header-text-image {
+        padding: 0 15px;
+
+    } 
+}
+
+@include mq(large) {
+    .header-text-image {
+        padding: 0 90px;
+
+    }
+    
+}
+//move to left media query
 @include mq(x-large) {
     .header-text-image {
-       text-align: start; 
+        text-align: start; 
+        padding: 0 30px;
+        &__item {
+            max-width: 800px;
+        }
+        .button {
+            margin-left: 0;
+        }
+        h2 {
+            font-size: 64px;
+        }
+        p {
+            font-size: 26px;
+        }
     }
 }

@@ -25,10 +25,13 @@ main {
 
 a {
     text-decoration: none;
+    font-family: $font-family--primary;
+    color: $white;
 }
 
 h2 {
     font-size: 40px;
+    margin: 0;
 }
 
 h4 {
@@ -38,6 +41,7 @@ h4 {
 
 p {
     font-size: 20px;
+    margin: 0
 }
 
 footer {
