@@ -799,13 +799,21 @@ img {
       width: 134.29px; } }
   .main-nav ul {
     columns: 3;
-    margin-top: 20px; }
+    margin-top: 20px;
+    line-height: 20px; }
     .main-nav ul a {
       color: #FFF;
-      font-size: 1.5em;
-      line-height: 48px; }
+      margin-left: 18px; }
       .main-nav ul a:hover {
         text-decoration: underline; }
+    .main-nav ul li {
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: row;
+      font-size: 1.375em; }
+      .main-nav ul li i {
+        margin-top: auto;
+        margin-bottom: auto; }
   .main-nav__item {
     display: block;
     padding: 19px 0 18px;
@@ -817,8 +825,6 @@ img {
       height: 35px;
       clip-path: polygon(0 0, 50% 100%, 100% 0%);
       transform: translate(0, 15px); }
-    .main-nav__item i {
-      margin-right: 15px; }
     .main-nav__item--child {
       text-align: center;
       text-transform: uppercase; }

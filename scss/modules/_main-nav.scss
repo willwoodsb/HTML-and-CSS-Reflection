@@ -38,12 +38,22 @@
     ul {
         columns: 3;
         margin-top: 20px;
+        line-height: 20px;
         a {
             color: $white;
-            font-size: em(24px);
-            line-height: (2 * $base__line);
+            margin-left: 18px;
             &:hover {
                 text-decoration: underline;
+            }
+        }
+        li {
+            margin-bottom: 30px;
+            display: flex;
+            flex-direction: row;
+            font-size: em(22px);
+            i {
+                margin-top: auto;
+                margin-bottom: auto;
             }
         }
     }
@@ -63,10 +73,6 @@
                 clip-path: polygon(0 0,50% 100%,100% 0%);
                 transform: translate(0, 15px);
             }
-
-        }
-        i {
-            margin-right: 15px;
         }
 
         //sub-elements within each item (i.e. formatting the item)
