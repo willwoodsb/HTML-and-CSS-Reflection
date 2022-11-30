@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------
 
 .main-nav {
-    height: 90px;
+    height: 99px;
     color: $white;
     text-transform: uppercase;
     @include flex-row;
@@ -26,8 +26,8 @@
                 line-height: $font-size--xsmall;
             }
             &:last-child {
-                font-size: 20px;
-                line-height: 20px;
+                font-size: 18px;
+                line-height: 19px;
             }
         }
     }

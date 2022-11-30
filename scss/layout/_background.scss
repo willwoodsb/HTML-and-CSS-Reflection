@@ -1,10 +1,10 @@
 .grey {
-    background-color: $grey;
+    background-color: lighten($grey, 80%);
 }
 
 .bck-img {
     height: 550px;
-    background-image: url("../img/home-oaVs.webp"), linear-gradient(to right, darken($dark-grey, 55%) , $white); 
+    background-image: url("../img/home-oaVs.webp"), linear-gradient(-270deg, darken($dark-grey, 55%) , $white); 
     background-repeat: no-repeat;
     background-position: center;
     background-blend-mode: multiply;
