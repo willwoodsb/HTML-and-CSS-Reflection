@@ -992,6 +992,20 @@ img {
       font-size: 64px; }
     .header-text-image p {
       font-size: 26px; } }
+.carousel {
+  display: flex;
+  flex-direction: row;
+  width: 1900px;
+  padding: 50px 0;
+  justify-content: center; }
+  .carousel__item {
+    margin: auto 30px; }
+    .carousel__item:not(:hover) {
+      filter: grayscale(100%); }
+
+.grey .carousel__item {
+  mix-blend-mode: multiply; }
+
 @media screen and (max-width: 767px) {
   .is-collapsed-small-screen {
     visibility: collapse;

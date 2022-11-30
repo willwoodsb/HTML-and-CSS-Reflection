@@ -1,0 +1,20 @@
+// --------------------------------------------------------------------------
+// Image Carousel -----------------------------------------------------------
+// --------------------------------------------------------------------------
+
+.carousel {
+    @include flex-row;
+    width: 1900px;
+    padding: 50px 0;
+    justify-content: center;
+    &__item {
+        margin: auto 30px;
+        &:not(:hover) {
+            filter: grayscale(100%);
+        }
+    }
+}
+
+.grey .carousel__item {
+    mix-blend-mode: multiply;
+}
