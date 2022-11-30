@@ -5,15 +5,74 @@
 .main-nav {
     height: 99px;
     color: $white;
-    text-transform: uppercase;
     @include flex-row;
     justify-content: center;
+
+    //defining the hover triangle and popup properties
+    .triangle, .menu-popup {
+        visibility: collapse;
+    }
+    .triangle {
+        position: absolute;
+        z-index: 100;
+    }
+    .menu-popup {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        color: $white;
+        z-index: 99;
+        padding: 50px;
+        transform: translate(0, 15px);
+        h3 {
+            font-size: em(30px);
+        }
+    }
+    @media screen and (max-width: ($brkpoint-xxlg - 1)) {
+        .triangle {
+            width: 134.29px;
+        }
+    }
+    
+    //pop up element formatting
+    ul {
+        columns: 3;
+        margin-top: 20px;
+        a {
+            color: $white;
+            font-size: em(24px);
+            line-height: (2 * $base__line);
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    //menu items
     &__item {
         display: block;
         padding: 19px 0 18px;
         width: 134.29px;
+        &:hover {
+            .menu-popup {
+                visibility: visible;
+            }
+            .triangle {
+                visibility: visible;
+                height: 35px;
+                clip-path: polygon(0 0,50% 100%,100% 0%);
+                transform: translate(0, 15px);
+            }
+
+        }
+        i {
+            margin-right: 15px;
+        }
+
+        //sub-elements within each item (i.e. formatting the item)
         &--child {
             text-align: center;
+            text-transform: uppercase;
             &:not(:first-child) {
                 color:$white;  
             }
@@ -34,7 +93,7 @@
 }
 
 @include mq(xx-large) {
-    .main-nav__item {
+    .main-nav__item, .triangle {
         width: 167.14px;
     }
 }
@@ -55,6 +114,12 @@
         }
         &:hover {
             background-color: map-get($theme-colors, $theme);
+            .triangle {
+                background-color: map-get($theme-colors, $theme);
+            }
+            .menu-popup {
+                background-color: darken(map-get($theme-colors, $theme), 10%);
+            }
         }
     }
 }
