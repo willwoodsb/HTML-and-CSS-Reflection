@@ -102,12 +102,29 @@ footer {
     text-transform: uppercase;
     border-radius: 3px;
 }
-
 blockquote {
     font-size: em(21px);
     font-style: italic;
     margin: 0;
     text-align: left;
+}
+.head {
+    @include flex-row;
+    justify-content: space-between;
+    color: $color-primary;
+    &--item:last-child {
+        margin-top: auto;
+        margin-bottom: auto;
+        color: $color-primary;
+        font-size: em(26px);
+        font-weight: 600;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    & span::after {
+        content: " \ea3c";
+    }
 }
 
 

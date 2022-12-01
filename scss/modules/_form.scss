@@ -1,0 +1,68 @@
+// --------------------------------------------------------------------------
+// email sign-up form -------------------------------------------------------
+// --------------------------------------------------------------------------
+#form-title {
+
+    color: $color-primary;
+    font-size: em(32px);
+    font-weight: 400;
+
+}
+#email-form {
+    padding: 50px 0;
+}
+
+.form {
+    display: grid;
+    grid-template-rows: auto;
+    grid-gap: 25px;
+    padding: 10px 0 0 0;
+    &__item:not(:last-child) {
+        @include flex-col;
+    }
+    &__item:last-child {
+        @include flex-row;
+    }
+    label, a {
+        font-size: em(16px);
+        font-weight: 600;
+
+    }
+    &__item {
+        a {
+            color: $color-primary;
+            margin-left: 15px;
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+    input[type=text] {
+        height: 47px;
+        padding: 5px 15px;
+        border: none;
+        box-shadow: 0 0 1px $granite;
+    }
+}
+
+@include mq(x-large) {
+    .form {
+        grid-template-columns: 1fr 1fr;
+        &__item {
+           &:first-child {
+                grid-column-start: 1;
+                grid-column-end: 2;
+            }
+            &:nth-child(2) {
+                grid-column-start: 2;
+                grid-column-end: 3;
+            } 
+            &:last-child {
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+        }
+        
+    }
+}
+

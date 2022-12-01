@@ -275,6 +275,22 @@ blockquote {
   margin: 0;
   text-align: left; }
 
+.head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #333645; }
+  .head--item:last-child {
+    margin-top: auto;
+    margin-bottom: auto;
+    color: #333645;
+    font-size: 1.625em;
+    font-weight: 600; }
+    .head--item:last-child:hover {
+      text-decoration: underline; }
+  .head span::after {
+    content: " \ea3c"; }
+
 ul,
 li {
   margin: 0;
@@ -306,6 +322,9 @@ img {
 .grey {
   background-color: rgba(204, 204, 204, 0.1); }
 
+.dark-grey {
+  background-color: rgba(0, 0, 0, 0.1); }
+
 .bck-img {
   height: 550px;
   background-image: url("../img/home-oaVs.webp"), linear-gradient(-270deg, #101112, #FFF);
@@ -316,6 +335,54 @@ img {
 
 .primary {
   background-color: #333645; }
+
+input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.consent-box {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer; }
+
+.checkmark {
+  border: 3px solid #333645;
+  border-radius: 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px; }
+
+.consent-box input:checked ~ .checkmark {
+  background-color: #333645; }
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+/* Show the checkmark when checked */
+.consent-box input:checked ~ .checkmark:after {
+  display: block; }
+
+/* Style the checkmark/indicator */
+.consent-box .checkmark:after {
+  left: 8px;
+  top: 3px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg); }
 
 .services, .offices, .services__item, .offices__item {
   display: flex;
@@ -340,24 +407,7 @@ img {
     position: absolute; }
 
 .our-services {
-  color: #333645;
   padding: 50px 0; }
-  .our-services a {
-    color: #333645; }
-  .our-services__head {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between; }
-    .our-services__head--item:last-child {
-      margin-top: auto;
-      margin-bottom: auto;
-      color: #333645;
-      font-size: 1.625em;
-      font-weight: 600; }
-      .our-services__head--item:last-child:hover {
-        text-decoration: underline; }
-    .our-services__head span::after {
-      content: " \ea3c"; }
   .our-services__content {
     display: grid;
     grid-gap: 20px;
@@ -1070,6 +1120,107 @@ img {
       grid-column-end: 2; }
     .welcome__col:last-child {
       grid-column-start: 2;
+      grid-column-end: 3; } }
+.latest-news {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 30px; }
+  .latest-news__item {
+    background-color: #FFF;
+    box-shadow: 0 0 1px #999AA2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .latest-news__item .padding {
+      margin: 10px 30px; }
+      .latest-news__item .padding:nth-child(2) {
+        margin-top: 20px; }
+      .latest-news__item .padding:nth-child(4) {
+        margin-bottom: 20px; }
+    .latest-news__item h3 {
+      color: #67809F;
+      font-size: 1em;
+      font-weight: 600; }
+    .latest-news__item p {
+      color: #666;
+      font-size: 13px; }
+    .latest-news__item .button {
+      color: #FFF;
+      background-color: #67809F;
+      margin-right: auto;
+      padding: 12px 15px; }
+    .latest-news__item .user {
+      border-top: 1px solid #ccc;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start; }
+      .latest-news__item .user img {
+        border-radius: 50%;
+        margin-right: 20px; }
+    .latest-news__item--content img {
+      width: 100%; }
+
+.latest-news__head {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+@media screen and (min-width: 768px) {
+  .latest-news {
+    grid-template-columns: 1fr 1fr; }
+    .latest-news__item:first-child {
+      grid-column-start: 1;
+      grid-column-end: 2; }
+    .latest-news__item:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 3; } }
+@media screen and (min-width: 992px) {
+  .latest-news__item {
+    height: 633px; } }
+#form-title {
+  color: #333645;
+  font-size: 2em;
+  font-weight: 400; }
+
+#email-form {
+  padding: 50px 0; }
+
+.form {
+  display: grid;
+  grid-template-rows: auto;
+  grid-gap: 25px;
+  padding: 10px 0 0 0; }
+  .form__item:not(:last-child) {
+    display: flex;
+    flex-direction: column; }
+  .form__item:last-child {
+    display: flex;
+    flex-direction: row; }
+  .form label, .form a {
+    font-size: 1em;
+    font-weight: 600; }
+  .form__item a {
+    color: #333645;
+    margin-left: 15px; }
+    .form__item a span {
+      text-decoration: underline; }
+  .form input[type=text] {
+    height: 47px;
+    padding: 5px 15px;
+    border: none;
+    box-shadow: 0 0 1px #666; }
+
+@media screen and (min-width: 992px) {
+  .form {
+    grid-template-columns: 1fr 1fr; }
+    .form__item:first-child {
+      grid-column-start: 1;
+      grid-column-end: 2; }
+    .form__item:nth-child(2) {
+      grid-column-start: 2;
+      grid-column-end: 3; }
+    .form__item:last-child {
+      grid-column-start: 1;
       grid-column-end: 3; } }
 @media screen and (max-width: 767px) {
   .is-collapsed-small-screen {

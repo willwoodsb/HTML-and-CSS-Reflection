@@ -1,7 +1,9 @@
 .grey {
     background-color: lighten($grey, 80%);
 }
-
+.dark-grey {
+    background-color: $grey;
+}
 .bck-img {
     height: 550px;
     background-image: url("../img/home-oaVs.webp"), linear-gradient(-270deg, darken($dark-grey, 55%) , $white); 
