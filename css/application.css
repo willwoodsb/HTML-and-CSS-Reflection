@@ -269,6 +269,12 @@ footer {
   text-transform: uppercase;
   border-radius: 3px; }
 
+blockquote {
+  font-size: 1.3125em;
+  font-style: italic;
+  margin: 0;
+  text-align: left; }
+
 ul,
 li {
   margin: 0;
@@ -280,7 +286,7 @@ img {
   max-width: 100%; }
 
 .width {
-  margin: 0 10px; }
+  margin: 0 25px; }
   @media screen and (min-width: 768px) {
     .width {
       max-width: 720px;
@@ -824,7 +830,7 @@ img {
       visibility: visible;
       height: 35px;
       clip-path: polygon(0 0, 50% 100%, 100% 0%);
-      transform: translate(0, 15px); }
+      transform: translate(0, 14.5px); }
     .main-nav__item--child {
       text-align: center;
       text-transform: uppercase; }
@@ -1006,6 +1012,65 @@ img {
 .grey .carousel__item {
   mix-blend-mode: multiply; }
 
+.welcome {
+  color: #FFF;
+  padding: 50px 0;
+  display: grid;
+  grid-template-rows: auto; }
+  .welcome a {
+    color: #FFF; }
+  .welcome p, .welcome blockquote {
+    margin-bottom: 25px; }
+  .welcome p {
+    font-size: 1em;
+    letter-spacing: 0.7px;
+    line-height: 28.8px; }
+    .welcome p span::after {
+      font-size: 45px;
+      content: " \e9d9\e9d9\e9d9\e9d9\e9d9"; }
+    .welcome p a:hover {
+      text-decoration: underline; }
+  .welcome h2 {
+    margin-bottom: 35px;
+    font-size: 2.25em; }
+  .welcome .button {
+    padding: 12px 30px;
+    font-size: 1.25em;
+    border-radius: 5px; }
+    .welcome .button span::after {
+      content: "\ea3c"; }
+  .welcome .read-more {
+    background: #282b36; }
+    .welcome .read-more:hover {
+      background-color: #121419; }
+  .welcome .google-rev {
+    background: #4183D7; }
+    .welcome .google-rev:hover {
+      background-color: #286abd; }
+  .welcome .trustpilot-rev {
+    background: #2ecc71; }
+    .welcome .trustpilot-rev:hover {
+      background-color: #25a25a; }
+  .welcome__col div {
+    margin-top: 37px; }
+  .welcome__col:first-child div {
+    margin-bottom: 62px; }
+  .welcome blockquote + p {
+    font-size: 1.1em;
+    color: #A3A8AC;
+    font-weight: 600;
+    margin-bottom: 62px; }
+
+@media screen and (min-width: 992px) {
+  .welcome {
+    grid-template-columns: repeat(1fr, 2);
+    grid-gap: 30px; }
+    .welcome__col:first-child {
+      grid-column-start: 1;
+      grid-column-end: 2; }
+    .welcome__col:last-child {
+      grid-column-start: 2;
+      grid-column-end: 3; } }
 @media screen and (max-width: 767px) {
   .is-collapsed-small-screen {
     visibility: collapse;

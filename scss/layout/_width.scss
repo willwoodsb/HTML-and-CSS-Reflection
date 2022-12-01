@@ -3,7 +3,7 @@
 // --------------------------------------------------------------------------
 
 .width {
-    margin: 0 10px;
+    margin: 0 25px;
     @include mq(large) {
         max-width: 720px;
         @include auto-mg;
