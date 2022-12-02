@@ -9,15 +9,7 @@
     justify-content: center;
 
     //defining the hover triangle and popup properties
-    .triangle, .menu-popup {
-        visibility: collapse;
-    }
-    .triangle {
-        position: absolute;
-        z-index: 100;
-    }
     .menu-popup {
-        position: absolute;
         left: 0;
         width: 100%;
         color: $white;
@@ -64,13 +56,9 @@
         padding: 19px 0 18px;
         width: 134.29px;
         &:hover {
-            .menu-popup {
-                visibility: visible;
-            }
+            @extend %popup-hover;
             .triangle {
-                visibility: visible;
                 height: 35px;
-                clip-path: polygon(0 0,50% 100%,100% 0%);
                 transform: translate(0, 14.5px);
             }
         }

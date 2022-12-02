@@ -37,14 +37,14 @@ input[type=checkbox] {
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
-    .checkmark:after {
+.checkmark:after {
     content: "";
     position: absolute;
     display: none;
 }
 
 /* Show the checkmark when checked */
-    .consent-box input:checked ~ .checkmark:after {
+.consent-box input:checked ~ .checkmark:after {
     display: block;
 }
 

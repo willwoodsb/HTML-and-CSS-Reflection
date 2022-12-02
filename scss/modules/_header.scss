@@ -92,10 +92,7 @@
         border: 1px solid #ccc;
         border-radius: 2px 0 0 2px;;
         padding-left: 15px;
-        &:focus {
-            outline: $tufts-blue;
-            box-shadow: 0 0 10px $tufts-blue;
-        }
+        @include blue-focus;
         &__icon {
             color: $white;
             background-color: $dark-grey;

@@ -4,17 +4,59 @@
 
 .carousel {
     @include flex-row;
-    width: 1900px;
+    width: 100%;
     padding: 50px 0;
     justify-content: center;
     &__item {
         margin: auto 30px;
+        position: relative;
+        .popup {
+            top: -50px;
+            left: 50%;
+            transform: translate(-50%, -100%);
+        }
         &:not(:hover) {
             filter: grayscale(100%);
         }
+        &:hover {
+            @extend %popup-hover;
+            .triangle {
+                width: 75px;
+                height: 35px;
+                background-color: $color-primary;
+                left: 50%;
+                transform: translate(-50%, -1px);
+                clip-path: polygon(0 0,50% 100%,100% 0%);
+            }
+        }
+
     }
 }
 
-.grey .carousel__item {
+.grey .jpg {
     mix-blend-mode: multiply;
 }
+
+.banner-popup {
+    width: 250px;
+    text-align: center;
+    background-color: $color-primary;
+    color: $white;
+    padding: 20px 10px;
+    p {
+        font-size: $font-size--small;
+    }
+    h4, p {
+        margin-bottom: 10px;
+    }
+    h4 {
+        margin-top: 0px;
+        text-transform: none;
+    }
+}
+hr.line {
+    width: 20px;
+    border-top: 2px solid $white;
+
+}
+

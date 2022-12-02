@@ -1,0 +1,23 @@
+// --------------------------------------------------------------------------
+// popup general properties -------------------------------------------------
+// --------------------------------------------------------------------------
+
+.triangle, .popup {
+    visibility: collapse;
+}
+.triangle {
+    position: absolute;
+    z-index: 100;
+}
+.popup {
+    position: absolute;
+}
+
+%popup-hover {
+    .triangle, .popup {
+        visibility: visible;
+    }
+    .triangle {
+        clip-path: polygon(0 0,50% 100%,100% 0%);
+    }
+}

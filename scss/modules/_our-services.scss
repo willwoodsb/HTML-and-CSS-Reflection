@@ -20,10 +20,7 @@
             text-align: center;
             border: 0.7px solid $dark-grey;
             border-radius: 15px;
-            transition: .5s ease;
-            &:hover {
-                transform: translate(0, -10px);
-            }
+            @extend %animate;
             p {
                 font-size: $font-size--small;
                 margin: 0 0 25px;
