@@ -3,7 +3,13 @@
 // --------------------------------------------------------------------------
 
 .top-banner {
-    padding: 20px 4px 20px 4px;
+    padding: 20px 0 20px 0;
+}
+
+.netmatters {                    
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 //--------------------------------------------------------------------------------------------------
@@ -15,18 +21,19 @@
         @include flex-col;
         &__row {
             &--item:not(:first-child) {
+                flex-shrink: 0;
+            }
+            .phone {
                 margin-left: 10px;
                 margin-right: 10px;
-                flex-shrink: 0;
+            }
+            &--item:last-child {
+                margin-left: 10px;
+                margin-right: 0;
             }
             &:first-child {
                 @include flex-row;
-                justify-content: space-around;
-            }
-            &--item:first-child {
-                margin-right: auto;
-                margin-top: auto;
-                margin-bottom: auto;
+                justify-content: space-between;
             }
 
         }
@@ -80,31 +87,35 @@
 //second stage of mquery
 //----------------------
 
+@media screen and (min-width: $brkpoint-lg) and (max-width: ($brkpoint-xlg - 1)) {
+    .top-banner__row {
+        &--item:first-child {
+            width: 345px;
+        }
+    }
+}
+
 @include mq(large) {
     .top-banner__row {
         @include flex-row;
-        justify-content: center;
-        &--item:first-child {
-            margin-right: 80px;
-            width: 370px;
-        }
     } 
     .search {
         height: 56px;
         width: 174px;
         margin-right: 0px;
         border: 1px solid #ccc;
-        border-radius: 2px 0 0 2px;;
+        border-radius: 2px 0 0 2px;
         padding-left: 15px;
         @include blue-focus;
         &__icon {
             color: $white;
             background-color: $dark-grey;
+            border: none;
             height: 56px;
             width: 63px;
             font-size: $base__line;
             padding: 16px 19.5px 16px;
-            border-radius: 0 3px 3px 0;
+            border-radius: 3px;
             margin-left: 0;
             &:hover {
                 background-color: darken($dark-grey, 12%);
@@ -123,9 +134,9 @@
 //---------------------------------------
 
 
-@include mq(x-large) {
-    .search__icon {
-        border-radius: 2px;
+@include mq(xx-large) {
+    .top-search__child:first-child {
+        width: 240px;
     }
 
 }

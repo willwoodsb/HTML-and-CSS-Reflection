@@ -509,24 +509,29 @@ img {
     color: #FFF; }
 
 .top-banner {
-  padding: 20px 4px 20px 4px; }
+  padding: 20px 0 20px 0; }
+
+.netmatters {
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto; }
 
 @media screen and (max-width: 767px) {
   .top-banner {
     display: flex;
     flex-direction: column; }
     .top-banner__row--item:not(:first-child) {
-      margin-left: 10px;
-      margin-right: 10px;
       flex-shrink: 0; }
+    .top-banner__row .phone {
+      margin-left: 10px;
+      margin-right: 10px; }
+    .top-banner__row--item:last-child {
+      margin-left: 10px;
+      margin-right: 0; }
     .top-banner__row:first-child {
       display: flex;
       flex-direction: row;
-      justify-content: space-around; }
-    .top-banner__row--item:first-child {
-      margin-right: auto;
-      margin-top: auto;
-      margin-bottom: auto; }
+      justify-content: space-between; }
 
   .phone__image {
     height: 25px;
@@ -563,14 +568,13 @@ img {
       transform: translate(-50%, -50%);
       height: 20px;
       width: 20px; } }
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .top-banner__row--item:first-child {
+    width: 345px; } }
 @media screen and (min-width: 768px) {
   .top-banner__row {
     display: flex;
-    flex-direction: row;
-    justify-content: center; }
-    .top-banner__row--item:first-child {
-      margin-right: 80px;
-      width: 370px; }
+    flex-direction: row; }
 
   .search {
     height: 56px;
@@ -585,11 +589,12 @@ img {
     .search__icon {
       color: #FFF;
       background-color: #999AA2;
+      border: none;
       height: 56px;
       width: 63px;
       font-size: 24px;
       padding: 16px 19.5px 16px;
-      border-radius: 0 3px 3px 0;
+      border-radius: 3px;
       margin-left: 0; }
       .search__icon:hover {
         background-color: #797a85; }
@@ -599,9 +604,9 @@ img {
     display: flex;
     flex-direction: row;
     margin-right: 25px; } }
-@media screen and (min-width: 992px) {
-  .search__icon {
-    border-radius: 2px; } }
+@media screen and (min-width: 1260px) {
+  .top-search__child:first-child {
+    width: 240px; } }
 .box {
   border-radius: 2px;
   position: relative;
