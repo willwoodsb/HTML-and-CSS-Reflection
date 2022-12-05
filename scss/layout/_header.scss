@@ -52,6 +52,7 @@
     .search-wrapper {
         width: 100%;
         @include flex-row;
+        margin-top: 6px;
         &__item {
             height: 47px;
             background-color: $grey;
@@ -62,9 +63,11 @@
                 border-right: none;
                 color: $dark-grey;
                 flex-grow: 1;
+                min-width: 0;
             }
             &:last-child {
                 border-left: none;
+                flex-shrink: 0;
             }
         }
     }
@@ -115,7 +118,6 @@
             width: 63px;
             font-size: $base__line;
             padding: 16px 19.5px 16px;
-            border-radius: 3px;
             margin-left: 0;
             &:hover {
                 background-color: darken($dark-grey, 12%);
@@ -126,6 +128,26 @@
         margin-top:6px;
         @include flex-row;
         margin-right: 25px;
+    }
+}
+
+//---------------------------------------
+//search icon border radii
+//---------------------------------------
+
+@media screen and (max-width: ($brkpoint-xlg - 1)) {
+    .search__icon {
+        border-radius: 0 3px 3px 0;
+    }
+}
+@media screen and (min-width: $brkpoint-xlg) and (max-width: ($brkpoint-xxlg - 1)) {
+    .search__icon {
+        border-radius: 3px;
+    }
+}
+@media screen and (min-width: $brkpoint-xxlg) {
+    .search__icon {
+        border-radius: 0 3px 3px 0;
     }
 }
 
@@ -146,7 +168,7 @@
 //---------------------------------------
 
 .box {
-    border-radius: 2px;
+    border-radius: 3px;
     position: relative;
     height: 56px;
     margin-top:6px;

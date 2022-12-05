@@ -56,7 +56,9 @@
 }
 hr.line {
     width: 20px;
-    border-top: 2px solid $white;
+    height: 2px;
+    border-top: 0;
+    background-color: $white;
 
 }
 

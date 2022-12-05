@@ -5,7 +5,7 @@
     background-color: $grey;
 }
 .bck-img {
-    height: 550px;
+    background-size: contain;
     background-image: url("../img/home-oaVs.webp"), linear-gradient(-270deg, darken($dark-grey, 55%) , $white); 
     background-repeat: no-repeat;
     background-position: center;

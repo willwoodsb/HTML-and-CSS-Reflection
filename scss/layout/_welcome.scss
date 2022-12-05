@@ -60,8 +60,19 @@
         }
     }
     &__col {
+
         div {
             margin-top: 37px; //had to add wrapper div for read more as margin-bottom would not apply without
+            a {
+                display: inline-block;
+                text-align: center;
+            }
+            @include mq(xx-large) {
+                display: inline;
+                &:last-child {
+                    margin-left: 9px;
+                }
+            }
         }
         &:first-child {
             div {
