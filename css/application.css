@@ -332,7 +332,7 @@ img {
   padding: 50px 0; }
   .our-services__content {
     display: grid;
-    grid-gap: 20px;
+    grid-gap: 30px;
     grid-template-rows: auto;
     margin-top: 30px; }
     .our-services__content--item {
@@ -342,7 +342,8 @@ img {
       background-color: #FFF;
       padding: 30px;
       text-align: center;
-      border: 0.7px solid #999AA2;
+      border: 1px solid #ccc;
+      box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
       border-radius: 15px; }
       .our-services__content--item p {
         font-size: 13px;
@@ -1105,7 +1106,9 @@ hr.line {
   .latest-news__item {
     position: relative;
     background-color: #FFF;
-    box-shadow: 0 0 1px #999AA2;
+    border: 1px solid #ccc;
+    box-shadow: 0 3px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 3px;
     display: flex;
     flex-direction: column;
     justify-content: space-between; }
@@ -1191,7 +1194,7 @@ hr.line {
     height: 633px; } }
 @media screen and (min-width: 768px) and (max-width: 1260px) {
   #green-team {
-    visibility: collapse;
+    display: none;
     padding: 0;
     height: 0;
     margin: 0;
@@ -1235,6 +1238,7 @@ hr.line {
       box-shadow: 0 0 10px #4183D7; }
   .form input[type=submit] {
     margin-right: auto;
+    border: none;
     background: #333645;
     color: #FFF;
     padding: 9px 15px;
@@ -1354,7 +1358,7 @@ input[type=checkbox] {
 
 @media screen and (max-width: 767px) {
   .is-collapsed-small-screen {
-    visibility: collapse;
+    display: none;
     padding: 0;
     height: 0;
     margin: 0;
@@ -1363,7 +1367,7 @@ input[type=checkbox] {
 
 @media screen and (min-width: 768px) {
   .is-collapsed-large-screen {
-    visibility: collapse;
+    display: none;
     padding: 0;
     height: 0;
     margin: 0;
@@ -1372,7 +1376,7 @@ input[type=checkbox] {
 
 @media screen and (max-width: 768px) {
   .is-visible-large-screen {
-    visibility: collapse;
+    display: none;
     padding: 0;
     height: 0;
     margin: 0;
@@ -1381,7 +1385,7 @@ input[type=checkbox] {
 
 @media screen and (min-width: 992px) and (max-width: 1260px) {
   .is-collapsed-x-large-screen {
-    visibility: collapse;
+    display: none;
     padding: 0;
     height: 0;
     margin: 0;
@@ -1390,7 +1394,7 @@ input[type=checkbox] {
 
 @media screen and (max-width: 992px) {
   .is-visible-x-large-screen {
-    visibility: collapse;
+    display: none;
     padding: 0;
     height: 0;
     margin: 0;

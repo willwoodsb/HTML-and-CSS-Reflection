@@ -9,7 +9,9 @@
     &__item {
         position: relative;
         background-color: $white;
-        box-shadow: 0 0 1px $dark-grey;
+        border: 1px solid #ccc;
+        box-shadow: 0 3px 35px rgba(0,0,0,10%);
+        border-radius: 3px;
         @include flex-col;
         justify-content: space-between;
         @extend %animate;
