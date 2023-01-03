@@ -1,0 +1,27 @@
+// --------------------------------------------------------------------------
+// sticky header ------------------------------------------------------------
+// --------------------------------------------------------------------------
+header {
+    height: 170px;
+    @include mq(large) {
+        height: 117px;
+    }
+    @include mq(x-large) {
+        height: 216px;
+    }
+    
+}
+.sticky-header {
+    background-color: $white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+.stuck {
+    position: fixed; 
+    top: -600px;
+    transition: .5s;
+    z-index: 100;
+    width: 100%;
+}
+.reveal {
+    transform: translate(0, 600px);
+}

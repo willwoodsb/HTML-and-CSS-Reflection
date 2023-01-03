@@ -23,7 +23,7 @@ $theme-img: (
 
 @each $theme, $img in $theme-img {
     ##{$theme}-slider {
-        background-image: url(#{$img}), linear-gradient(-270deg, darken($dark-grey, 30%) , $white);
+        background-image: url(#{$img}), linear-gradient(-270deg, darken($dark-grey, 40%) , $white);
     }
 }
 

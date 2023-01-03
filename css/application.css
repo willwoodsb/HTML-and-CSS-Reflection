@@ -1328,25 +1328,25 @@ hr.line {
   background-size: cover; }
 
 #software-slider {
-  background-image: url(../img/home-YLei.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+  background-image: url(../img/home-YLei.webp), linear-gradient(-270deg, #35363a, #FFF); }
 
 #it-support-slider {
-  background-image: url(../img/home-gay8.png), linear-gradient(-270deg, #4d4e55, #FFF); }
+  background-image: url(../img/home-gay8.png), linear-gradient(-270deg, #35363a, #FFF); }
 
 #dig-marketing-slider {
-  background-image: url(../img/home-6yTp.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+  background-image: url(../img/home-6yTp.webp), linear-gradient(-270deg, #35363a, #FFF); }
 
 #tel-services-slider {
-  background-image: url(../img/home-J8Xx.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+  background-image: url(../img/home-J8Xx.webp), linear-gradient(-270deg, #35363a, #FFF); }
 
 #web-design-slider {
-  background-image: url(../img/home-K0pn.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+  background-image: url(../img/home-K0pn.webp), linear-gradient(-270deg, #35363a, #FFF); }
 
 #cyber-security-slider {
-  background-image: url(../img/home-KvtG.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+  background-image: url(../img/home-KvtG.webp), linear-gradient(-270deg, #35363a, #FFF); }
 
 #bespoke-slider {
-  background-image: url(../img/home-O67Y.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+  background-image: url(../img/home-O67Y.webp), linear-gradient(-270deg, #35363a, #FFF); }
 
 .primary {
   background-color: #333645; }
@@ -1413,6 +1413,29 @@ input[type=checkbox] {
   visibility: visible; }
 .main-nav__item:hover .triangle, .carousel__item:hover .triangle {
   clip-path: polygon(0 0, 50% 100%, 100% 0%); }
+
+header {
+  height: 170px; }
+  @media screen and (min-width: 768px) {
+    header {
+      height: 117px; } }
+  @media screen and (min-width: 992px) {
+    header {
+      height: 216px; } }
+
+.sticky-header {
+  background-color: #FFF;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.2); }
+
+.stuck {
+  position: fixed;
+  top: -600px;
+  transition: .5s;
+  z-index: 100;
+  width: 100%; }
+
+.reveal {
+  transform: translate(0, 600px); }
 
 @media screen and (max-width: 767px) {
   .is-collapsed-small-screen {
