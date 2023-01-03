@@ -965,18 +965,54 @@ img {
     line-height: 1.275; }
   .header-text-image .button {
     font-size: 20px;
-    background-color: #67809F;
     padding: 15px 20px;
     margin: 31px 0 32px;
-    width: 200px;
     margin-left: auto;
     margin-right: auto; }
-    .header-text-image .button:hover {
-      background-color: #526781; }
   .header-text-image span {
     margin-left: 9px; }
     .header-text-image span:after {
       content: "\ea3c"; }
+
+#software-slider .button {
+  background-color: #67809F; }
+  #software-slider .button:hover {
+    background-color: #526781; }
+
+#it-support-slider .button {
+  background-color: #4183D7; }
+  #it-support-slider .button:hover {
+    background-color: #286abd; }
+
+#dig-marketing-slider .button {
+  background-color: #2ecc71; }
+  #dig-marketing-slider .button:hover {
+    background-color: #25a25a; }
+
+#tel-services-slider .button {
+  background-color: #d64541; }
+  #tel-services-slider .button:hover {
+    background-color: #bc2c28; }
+
+#web-design-slider .button {
+  background-color: #926fb1; }
+  #web-design-slider .button:hover {
+    background-color: #79539a; }
+
+#cyber-security-slider .button {
+  background-color: #f62459; }
+  #cyber-security-slider .button:hover {
+    background-color: #de093f; }
+
+#dev-course-slider .button {
+  background-color: #ce4125; }
+  #dev-course-slider .button:hover {
+    background-color: #a3331d; }
+
+#bespoke-slider .button {
+  background-color: #67809F; }
+  #bespoke-slider .button:hover {
+    background-color: #526781; }
 
 @media screen and (min-width: 992px) {
   .header-text-image {
@@ -1286,12 +1322,31 @@ hr.line {
   background-color: rgba(0, 0, 0, 0.1); }
 
 .bck-img {
-  background-size: contain;
-  background-image: url("../img/home-oaVs.webp"), linear-gradient(-270deg, #101112, #FFF);
   background-repeat: no-repeat;
   background-position: center;
   background-blend-mode: multiply;
   background-size: cover; }
+
+#software-slider {
+  background-image: url(../img/home-YLei.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+
+#it-support-slider {
+  background-image: url(../img/home-gay8.png), linear-gradient(-270deg, #4d4e55, #FFF); }
+
+#dig-marketing-slider {
+  background-image: url(../img/home-6yTp.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+
+#tel-services-slider {
+  background-image: url(../img/home-J8Xx.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+
+#web-design-slider {
+  background-image: url(../img/home-K0pn.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+
+#cyber-security-slider {
+  background-image: url(../img/home-KvtG.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
+
+#bespoke-slider {
+  background-image: url(../img/home-O67Y.webp), linear-gradient(-270deg, #4d4e55, #FFF); }
 
 .primary {
   background-color: #333645; }
