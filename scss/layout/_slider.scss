@@ -1,6 +1,65 @@
 // --------------------------------------------------------------------------
 // section with sliding images ----------------------------------------------
 // --------------------------------------------------------------------------
+//bottom slider links
+.owl-dots {
+    @include flex-row;
+    justify-content: center;
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+        // &:first-child {
+        //     border: 2px solid $white;
+        //     border-radius: 50%;
+        //     .slider-link__item--inner {
+        //         background-color: $white;
+        //     }
+        // }
+        // &:not(:first-child) {
+        //     &:hover {
+        //         .slider-link__item--inner {
+        //             background-color: #99aaa2;
+        //         } 
+        //     }
+        // }
+        // &--inner {
+        //     width: 11px;
+        //     height: 11px;
+        //     background-color: $dark-grey;
+        //     border-radius: 50%;
+        //     @extend %img-center;
+        // }
+}
+.owl-dot {
+    position: relative;
+    height: 23px;
+    width: 23px;
+    &:hover {
+        span {
+            background-color: #99aaa2;
+        }
+    }
+    span {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        @extend %img-center;
+        background-color: rgba(255,255,255,0.4);
+    }
+    margin: 0 5px;
+}
+
+.owl-carousel button.owl-dot.active {
+    border: 2px solid $white;
+    border-radius: 50%;
+    span {
+        background-color: $white;
+    }
+}
+
+
 
 //main styling rules
 .header-text-image {
@@ -48,42 +107,7 @@
         margin-left: 9px;
     }
 
-    //bottom slider links
-    .slider-link {
-        @include flex-row;
-        justify-content: center;
-        position: absolute;
-        bottom: 30px;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        &__item {
-            height: 23px;
-            width: 23px;
-            position: relative;
-            margin: 0 5px;
-            &:first-child {
-                border: 2px solid $white;
-                border-radius: 50%;
-                .slider-link__item--inner {
-                    background-color: $white;
-                }
-            }
-            &:not(:first-child) {
-                &:hover {
-                    .slider-link__item--inner {
-                        background-color: #99aaa2;
-                    } 
-                }
-            }
-            &--inner {
-                width: 11px;
-                height: 11px;
-                background-color: $dark-grey;
-                border-radius: 50%;
-                @extend %img-center;
-            }
-        }
-    }
+    
 }
 
 
