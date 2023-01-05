@@ -2,13 +2,18 @@
 // Image Carousel -----------------------------------------------------------
 // --------------------------------------------------------------------------
 
+#accreditation .owl-stage{
+    display: flex; 
+    align-items: center;
+}
+
 .carousel {
     @include flex-row;
     width: 100%;
     padding: 50px 0;
     justify-content: center;
     &__item {
-        margin: auto 30px;
+        margin: auto 20px;
         position: relative;
         .popup {
             top: -50px;
@@ -33,9 +38,6 @@
     }
 }
 
-.grey .jpg {
-    mix-blend-mode: multiply;
-}
 
 .banner-popup {
     width: 250px;

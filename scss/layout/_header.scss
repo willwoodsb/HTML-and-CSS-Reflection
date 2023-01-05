@@ -2,6 +2,8 @@
 // Header -------------------------------------------------------------------
 // --------------------------------------------------------------------------
 
+
+
 .top-banner {
     padding: 20px 0 20px 0;
 }
@@ -178,17 +180,17 @@
 .hamburger {
     background-color: $color-primary;
     width: 63px;
-    &:hover {
-        background-color: darken($color-primary, 10%);
-    }
-    &__image {
-        height: 45px;
-        width: 55px;
-    }
-    &__image {
+    &-box {
         @extend %img-center;
     }
-    
+}
+
+span.hamburger-inner, span.hamburger-inner::before, span.hamburger-inner::after, span.hamburger-inner.is-active {
+    background-color: $white;
+}
+
+.hamburger.is-active .hamburger-inner, .hamburger.is-active .hamburger-inner:after, .hamburger.is-active .hamburger-inner:before {
+    background-color: $white;
 }
 
 .mouse {

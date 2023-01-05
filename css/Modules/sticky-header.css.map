@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAGA,MAAO;EACH,MAAM,EAAE,KAAK;;AAEjB,MAAO;EACH,QAAQ,EAAE,KAAK;EACf,GAAG,EAAE,KAAK;EACV,UAAU,EAAE,QAAQ;EACpB,OAAO,EAAE,GAAG;;AAEhB,OAAQ;EACJ,SAAS,EAAE,kBAAkB;EAC7B,UAAU,EAAE,QAAQ",
-"sources": ["../../scss/Modules/sticky-header.scss"],
-"names": [],
-"file": "sticky-header.css"
-}

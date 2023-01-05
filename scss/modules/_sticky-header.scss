@@ -3,6 +3,7 @@
 // --------------------------------------------------------------------------
 header {
     height: 170px;
+    z-index: 1001;
     @include mq(large) {
         height: 117px;
     }
@@ -17,11 +18,10 @@ header {
 }
 .stuck {
     position: fixed; 
-    top: -600px;
-    transition: .5s;
+    top: -300px;
     z-index: 100;
     width: 100%;
 }
 .reveal {
-    transform: translate(0, 600px);
+    transform: translate(0, 300px);
 }

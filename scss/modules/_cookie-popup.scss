@@ -1,0 +1,74 @@
+// --------------------------------------------------------------------------
+// cookie popup -------------------------------------------------------------
+// --------------------------------------------------------------------------
+
+html.noscroll, .noscroll {
+  position: fixed; 
+  overflow-y: scroll;
+  width: 100%;
+}
+
+
+
+#cookiePopup-overlay {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  top: 0;
+  height: 100%;
+  z-index: 100000000;
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+}
+#cookiePopup {
+  @extend %img-center;
+  background: white;
+  width: 598px;
+  z-index: 100000001;
+  text-align: left;
+  border-bottom: 1px solid black;
+  display: none;
+  box-shadow: 0,0,25px,rgba(0,0,0,0.2);
+  border-radius: 4px;
+  color: #666;
+  h3 {
+    font-size: em(26px);
+    color: $onyx;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+  p {
+    font-size: 16px;
+    height: 215px;
+    line-height: (1.3*$base__line);
+  }
+  h3, p, .cookie-buttons {
+    padding: 20px;
+  }
+  h3 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+#cookiePopup button{
+  width: 100%;
+  border: none;
+  text-transform: uppercase;
+  font-size: em(17px);
+  padding: 2px;
+  height: 47px;
+  border-radius: 3px;
+  color: white;
+  &:first-child {
+    background: $dark-grey;
+    margin-right: 30px;
+  }
+  &:last-child {
+    background: $purple-majesty;
+  }
+}
+
+.cookie-buttons {
+  border-top: 1px solid rgba(0,0,0,0.1);
+  @include flex-row;
+}

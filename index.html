@@ -4,13 +4,137 @@
     <title>Full Service Digital Agency | Cambridge & Norfolk | Netmatters</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="https://kit.fontawesome.com/cbfcb73618.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="hamburger-animation/hamburgers.min.css">
     <link rel="stylesheet" href="css/application.css">
     <link rel="stylesheet" href="owl-carousel/owl.carousel.min.css">
     <link rel="icon" href="img/net_icon.webp" type="image/x-icon">
     
   </head>
+
   <body>
-    <div>
+    <!-- hamburger menu -->
+    <section id="hamburger-menu">
+      <div class="side-nav">
+        <a href="#"><h4 class="header-box">Contact Us</h4></a>
+        <a href="#"><div class="header-box">
+          <div class="main-nav__item--child icon software__icon"></div>
+          <div class="main-nav__item--child">Bespoke</div>
+          <div class="main-nav__item--child">Sofware</div>
+        </div></a>
+        <ul>
+          <li><a href="#">Bespoke CRM & ERP</a></li>
+          <li><a href="#">Business Automation</a></li>
+          <li><a href="#">Software Integrations</a></li>
+          <li><a href="#">Mobile App Development</a></li>
+          <li><a href="#">Bespoke Databases</a></li>
+          <li><a href="#">Sharepoint Development</a></li>
+          <li><a href="#">Operational systems</a></li>
+          <li><a href="#">Business Central Implementation</a></li>
+          <li><a href="#">Internet of Things (IOT) Software</a></li>
+          <li><a href="#">Intranet Development</a></li>
+          <li><a href="#">Customer Development Portal</a></li>
+          <li><a href="#">Customer Portal Development</a></li>
+          <li><a href="#">Reporting Hub</a></li>
+        </ul>
+        <a href="#"><div class="header-box">
+          <div class="main-nav__item--child icon it-support__icon"></div>
+          <div class="main-nav__item--child">IT</div>
+          <div class="main-nav__item--child">Support</div>
+        </div></a>
+        <ul>
+          <li><a href="#">Managed IT Support</a></li>
+          <li><a href="#">Business IT Support</a></li>
+          <li><a href="#">Office 365 for Business</a></li>
+          <li><a href="#">IT Consultancy</a></li>
+          <li><a href="#">Cloud Provider</a></li>
+          <li><a href="#">Data Backup & Disaster Recovery</a></li>
+        </ul>
+        <a href="#"><div class="header-box">
+          <div class="main-nav__item--child icon dig-marketing__icon"></div>
+          <div class="main-nav__item--child">Digital</div>
+          <div class="main-nav__item--child">Marketing</div>
+        </div></a>
+        <ul>
+          <li><a href="#">Search Engine Optimisation (SEO)</a></li>
+          <li><a href="#">Pay Per Click (PPC)</a></li>
+          <li><a href="#">Conversion Rate Optimisation (CRO)</a></li>
+          <li><a href="#">Email Marketing</a></li>
+          <li><a href="#">Social Media Marketing</a></li>
+          <li><a href="#">Content Marketing</a></li>
+        </ul>
+        <a href="#"><div class="header-box">
+          <div class="main-nav__item--child icon tel-services__icon"></div>
+          <div class="main-nav__item--child">Telecoms</div>
+          <div class="main-nav__item--child">Services</div>
+        </div></a>
+        <ul>
+          <li><a href="#">Business Mobile</a></li>
+          <li><a href="#">Hosted VOIP Provider</a></li>
+          <li><a href="#">Business VOIP Systems</a></li>
+          <li><a href="#">Business Broadband</a></li>
+          <li><a href="#">Leased Lines Provider</a></li>
+          <li><a href="#">3CX Systems</a></li>
+        </ul>
+        <a href="#"><div class="header-box">
+          <div class="main-nav__item--child icon web-design__icon"></div>
+          <div class="main-nav__item--child">Web</div>
+          <div class="main-nav__item--child">Design</div>
+        </div></a>
+        <ul>
+          <li><a href="#">Bespoke Website Design</a></li>
+          <li><a href="#">Ecommerce Website Design</a></li>
+          <li><a href="#">Pay Monthly Websites</a></li>
+          <li><a href="#">Branding & Design</a></li>
+          <li><a href="#">Mobile App Development</a></li>
+          <li><a href="#">Web Hosting</a></li>
+        </ul>
+        <a href="#"><div class="header-box">
+          <div class="main-nav__item--child icon cyber-security__icon"></div>
+          <div class="main-nav__item--child">Cyber</div>
+          <div class="main-nav__item--child">Security</div>
+        </div></a>
+        <ul>
+          <li><a href="#">Cyber Security Assesment</a></li>
+          <li><a href="#">Cyber Security Management</a></li>
+          <li><a href="#">Cyber Penetration Testing</a></li>
+          <li><a href="#">Cyber Essentials Certification</a></li>
+          <li><a href="#">PCI Compliance</a></li>
+          <li><a href="#">Hacking Prevention</a></li>
+        </ul>
+        <a href="#"><div class="header-box">
+          <div class="main-nav__item--child icon dev-course__icon"></div>
+          <div class="main-nav__item--child">Developer</div>
+          <div class="main-nav__item--child">Course</div>
+        </div></a>
+        <ul>
+          <li><a href="#">Train for a Career in Tech</a></li>
+          <li><a href="#">Skills Bootcamp</a></li>
+          <li><a href="#">Scion Scheme Frequently Asked Questions</a></li>
+          <li><a href="#">Scion Collaborators</a></li>
+        </ul>
+        </ul>
+      </div>
+    </section>
+
+    <!-- cookie popup -->
+    <section id="cookiePopup-overlay">
+      <div id="cookiePopup">
+        <h3>Cookies Policy</h3>
+        <p>Our website uses cookies. This helps us provide you with a good experience on our website. To see what cookies we use and what they do, and to opt-in on non-essential cookies click "change settings". For a detailed explanation, click on "Privacy Policy" otherwise click "Accept Cookies" to enter.</a></p>
+        <div class="cookie-buttons">
+          <button>Change Settings</button>
+          <button id="acceptCookie">Accept</button>
+        </div>
+      </div> 
+    </section>
+
+
+    <div class="content-wrapper">
+
+      <!-- overlay used when hamburger menu is opened -->
+      <div id="grey-out"></div> 
+      
+      <!-- Header -->
       <header> 
         <div class="sticky-header">
           <!-- top banner -->
@@ -25,7 +149,13 @@
                     <button class="top-search__child search__icon icon"><img class="" src="img/search-white.png" alt="search icon"></button>
                 </form>
                 <a href="#" class="is-collapsed-large-screen phone top-banner__row--item"><img class="phone__image" src="img/phone.png" alt="phone icon"></a>
-                <a href="#" class="box hamburger top-banner__row--item"><img class="hamburger__image box__image" src="img/hamburger.png" alt="menu icon"></a>
+                
+                <a href="#!" class="hamburger hamburger--spin top-banner__row--item box">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </a>
+
               </div>
               <form method="post" class="top-banner__row is-collapsed-large-screen search-wrapper">
                 <input type="text" placeholder="Search.." class="search search-wrapper__item">
@@ -193,11 +323,12 @@
           </section>
         </div>
         
-      </header> 
-
+      </header>
+      
+      <!-- Main Website body -->
       <main>
         <!-- section with backing image -->
-        <section class="owl-carousel">
+        <section class="owl-carousel" id="banner-img">
           <div id="software-slider" class="bck-img">
             <div class="header-text-image width">
               <div class="header-text-image__item"><h2>The East of England's Leading Technology Company</h2></div>
@@ -322,16 +453,16 @@
 
         <!-- Accreditation banner/carousel -->
         <section class="grey">
-          <div class="carousel">
-            <a href="#" class="carousel__item jpg"><img src="img/google-partner.jpg" alt="Google Partner"></a>
-            <a href="#" class="carousel__item jpg"><img src="img/investing-in-future-growth.jpg" alt="Investing in Future Growth"></a>
-            <a href="#" class="carousel__item jpg"><img src="img/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter"></a>
-            <a href="#" class="carousel__item jpg"><img src="img/PPC_logo.jpg" alt="PPC"></a>
-            <!-- <a href="#" class="carousel__item jpg"><img src="img/princess-royal-training.jpg"></a>
-            <a href="#" class="carousel__item jpg"><img src="img/future-50.jpg"></a>
-            <a href="#" class="carousel__item jpg"><img src="img/qms.jpg"></a>
-            <a href="#" class="carousel__item jpg"><img src="img/iso_27001.jpg"></a>
-            <a href="#" class="carousel__item jpg"><img src="img/skills-of-tomorrow.jpg"></a> -->
+          <div class="carousel owl-carousel" id="accreditation">
+            <a class="carousel__item"><img src="img/google-partner.jpg" alt="Google Partner"></a>
+            <a class="carousel__item"><img src="img/investing-in-future-growth.jpg" alt="Investing in Future Growth"></a>
+            <a class="carousel__item"><img src="img/norfolk-carbon-charter.jpg" alt="Norfolk Carbon Charter"></a>
+            <a class="carousel__item"><img src="img/PPC_logo.jpg" alt="PPC"></a>
+            <a class="carousel__item"><img src="img/princess-royal-training.jpg"></a>
+            <a class="carousel__item"><img src="img/future-50.jpg"></a>
+            <a class="carousel__item"><img src="img/qms.jpg"></a>
+            <a class="carousel__item"><img src="img/iso_27001.jpg"></a>
+            <a class="carousel__item"><img src="img/skills-of-tomorrow.jpg"></a>
           </div>
 
         </section>
@@ -581,6 +712,7 @@
         </div>
       </footer>
     </div>
+
     <script
       src="https://code.jquery.com/jquery-3.6.3.min.js"
       integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
