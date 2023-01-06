@@ -1531,25 +1531,43 @@ header {
     outline: 1px solid rgba(0, 0, 0, 0.25); }
     #hamburger-menu .header-box:hover {
       background-color: #3a3d4e; }
-  #hamburger-menu h4 {
-    font-size: 1.125em; }
   #hamburger-menu ul {
     background-color: black;
-    border-top: 20px;
-    border-radius: 3px;
-    margin-bottom: 20px; }
+    border-radius: 3px; }
     #hamburger-menu ul li {
       margin-top: 1px;
       text-transform: uppercase;
       background-color: #282b36;
-      padding: 10px;
-      font-size: 16px; }
-      #hamburger-menu ul li:not(:first-child) {
-        border-top: 1px solid rgba(255, 255, 255, 0.05); }
-      #hamburger-menu ul li:first-child {
-        border-radius: 3px 3px 0 0; }
-      #hamburger-menu ul li:last-child {
-        border-radius: 0 0 3px 3px; }
+      border-top: 1px solid rgba(255, 255, 255, 0.05); }
+  #hamburger-menu .side-nav h4 {
+    font-size: 18px; }
+  #hamburger-menu .side-nav ul {
+    margin-bottom: 20px; }
+  #hamburger-menu .side-nav ul li {
+    font-size: 16px;
+    padding: 10px; }
+    #hamburger-menu .side-nav ul li:first-child {
+      border-radius: 3px 3px 0 0; }
+    #hamburger-menu .side-nav ul li:last-child {
+      border-radius: 0 0 3px 3px; }
+  #hamburger-menu .side-content {
+    text-align: left; }
+    #hamburger-menu .side-content ul li:first-child {
+      font-size: 16px;
+      padding: 20px;
+      background-color: #333645; }
+      #hamburger-menu .side-content ul li:first-child:hover {
+        background-color: #3a3d4e; }
+    #hamburger-menu .side-content ul li:not(:first-child) {
+      font-size: 14px;
+      padding: 15px 20px; }
+      #hamburger-menu .side-content ul li:not(:first-child):before {
+        content: "»   "; }
+    #hamburger-menu .side-content ul:first-child {
+      display: none; }
+      @media screen and (min-width: 992px) {
+        #hamburger-menu .side-content ul:first-child {
+          display: block; } }
 
 #grey-out {
   right: 0;
